@@ -17,14 +17,15 @@ def about():
 
 @app.route('/results')
 def results():
+    gifs = []
     search_output = request.values.get('search')
     results = g.search(search_output)
-    medias = []
+
 
     for result in results:
-        media.append(result.media_url)
+        gifs.append(result.media_url)
 
-    return render_template('results.html', media=media)
+    return render_template('results.html', media=gifs)
 
 
 app.run(debug=True)
