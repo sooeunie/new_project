@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Python Final Project</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="jumbotron">
+            <h1>Search Results</h1>
+
+        </div>
+            {% for gifs in gifs %}
+                <img src={{gifs}} style="width:380; height:190;">
+            {% endfor %}
+    </body>
+</html>
