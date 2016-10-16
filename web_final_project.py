@@ -19,7 +19,7 @@ def about():
 def results():
     search_output = request.values.get('search')
     results = g.search(search_output)
-    media = []
+    medias = []
 
     for result in results:
         media.append(result.media_url)
