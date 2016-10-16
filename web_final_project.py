@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from googlefinance import getQuotes
 app = Flask(__name__)
+import os
 import giphypop
 g = giphypop.Giphy()
 
@@ -27,6 +28,6 @@ def results():
 
     return render_template('results.html', gifs=gifs)
 
-
-app.run(debug=True)
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port)
 
