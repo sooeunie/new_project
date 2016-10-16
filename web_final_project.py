@@ -25,7 +25,7 @@ def results():
     for result in results:
         gifs.append(result.media_url)
 
-    return render_template('results.html', media=gifs)
+    return render_template('results.html', gifs=gifs)
 
 
 app.run(debug=True)
